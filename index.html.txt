@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Satsumayaki Heritage Museum</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #e6f0ea;
+}
+
+/* HEADER */
+header {
+    background: #0f2f2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+header img {
+    height: 80px;
+}
+
+/* MENU */
+nav {
+    background: #1f4f46;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BANNER */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1565193298357-6f3a1c1a0c1d');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+/* SECTION */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+h2 {
+    color: #0f2f2a;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0f2f2a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<img src="logo.png">
+<h1>SATSUMAYAKI HERITAGE MUSEUM</h1>
+<p>Preserving Japanese Ceramic Heritage</p>
+</header>
+
+<nav>
+<a href="#">Trang chủ</a>
+<a href="#">Giới thiệu</a>
+<a href="#">Trưng bày</a>
+<a href="#">Vé</a>
+<a href="#">Liên hệ</a>
+</nav>
+
+<div class="banner">
+KHÔNG GIAN GỐM SATSUMA
+</div>
+
+<div class="section">
+<h2>Giới thiệu</h2>
+<p>Bảo tàng lưu giữ tinh hoa gốm Satsuma Nhật Bản, kết nối lịch sử và nghệ thuật.</p>
+</div>
+
+<div class="section">
+<h2>Trưng bày</h2>
+
+<div class="card">Bộ sưu tập cổ</div>
+<div class="card">Không gian triển lãm</div>
+<div class="card">Gốm nghệ thuật</div>
+
+</div>
+
+<div class="section">
+<h2>Thông tin tham quan</h2>
+<p>🕒 08:00 – 22:00</p>
+<p>📍 17 Hùng Vương, Hội An</p>
+<p>📞 0935978887</p>
+</div>
+
+<div class="footer">
+© 2026 Satsumayaki Heritage Museum
+</div>
+
+</body>
+</html>
