@@ -2,32 +2,45 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Satsumayaki Heritage Museum</title>
 
 <style>
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: #e6f0ea;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
 }
 
 /* HEADER */
 header {
-    background: #0f2f2a;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1582582429416-8d3d2b9c92d5');
+    background-size: cover;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px;
 }
+
 header img {
-    height: 80px;
+    height: 90px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 36px;
 }
 
 /* MENU */
 nav {
-    background: #1f4f46;
-    padding: 10px;
+    background: #0f2f2a;
+    padding: 12px;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
+
 nav a {
     color: white;
     margin: 15px;
@@ -35,47 +48,39 @@ nav a {
     font-weight: bold;
 }
 
-/* BANNER */
-.banner {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('https://images.unsplash.com/photo-1565193298357-6f3a1c1a0c1d');
-    height: 400px;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 40px;
-}
-
 /* SECTION */
 .section {
-    padding: 50px;
+    padding: 60px 20px;
     text-align: center;
 }
-h2 {
+
+.section h2 {
     color: #0f2f2a;
 }
 
 /* CARD */
 .card {
     background: white;
-    padding: 20px;
     margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
     display: inline-block;
     width: 250px;
+}
+
+/* MAP */
+iframe {
     border-radius: 10px;
 }
 
 /* FOOTER */
-.footer {
+footer {
     background: #0f2f2a;
     color: white;
     padding: 20px;
     text-align: center;
 }
 </style>
-
 </head>
 
 <body>
@@ -87,23 +92,24 @@ h2 {
 </header>
 
 <nav>
-<a href="#">Trang chủ</a>
-<a href="#">Giới thiệu</a>
-<a href="#">Trưng bày</a>
-<a href="#">Vé</a>
-<a href="#">Liên hệ</a>
+<a href="#home">Trang chủ</a>
+<a href="#about">Giới thiệu</a>
+<a href="#gallery">Trưng bày</a>
+<a href="#ticket">Vé</a>
+<a href="#contact">Liên hệ</a>
 </nav>
 
-<div class="banner">
-KHÔNG GIAN GỐM SATSUMA
+<div id="home" class="section">
+<h2>Không gian gốm Satsuma</h2>
+<p>Trải nghiệm tinh hoa nghệ thuật gốm Nhật Bản</p>
 </div>
 
-<div class="section">
+<div id="about" class="section">
 <h2>Giới thiệu</h2>
 <p>Bảo tàng lưu giữ tinh hoa gốm Satsuma Nhật Bản, kết nối lịch sử và nghệ thuật.</p>
 </div>
 
-<div class="section">
+<div id="gallery" class="section">
 <h2>Trưng bày</h2>
 
 <div class="card">Bộ sưu tập cổ</div>
@@ -112,16 +118,26 @@ KHÔNG GIAN GỐM SATSUMA
 
 </div>
 
-<div class="section">
-<h2>Thông tin tham quan</h2>
+<div id="ticket" class="section">
+<h2>Vé tham quan</h2>
+<p>Người lớn: 50.000đ</p>
+<p>Trẻ em dưới 6 tuổi: Miễn phí</p>
 <p>🕒 08:00 – 22:00</p>
+</div>
+
+<div id="contact" class="section">
+<h2>Liên hệ</h2>
+
+<iframe src="https://maps.google.com/maps?q=Hoi%20An&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300"></iframe>
+
 <p>📍 17 Hùng Vương, Hội An</p>
 <p>📞 0935978887</p>
 </div>
 
-<div class="footer">
-© 2026 Satsumayaki Heritage Museum
-</div>
+<footer>
+© 2026 Satsuma Heritage Museum
+</footer>
 
 </body>
 </html>
