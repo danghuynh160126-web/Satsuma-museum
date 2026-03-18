@@ -85,7 +85,11 @@ h2 {
 <h1>SATSUMA HERITAGE MUSEUM</h1>
 <p>Preserving Japanese Ceramic Heritage</p>
 </header>
-
+<div style="margin-top:10px;">
+<button onclick="setLang('vi')">🇻🇳 VI</button>
+<button onclick="setLang('en')">🇬🇧 EN</button>
+<button onclick="setLang('jp')">🇯🇵 JP</button>
+</div>
 <nav>
 <a href="#">Trang chủ</a>
 <a href="#">Giới thiệu</a>
@@ -98,9 +102,40 @@ h2 {
 KHÔNG GIAN GỐM SATSUMA
 </div>
 
-<div class="section">
+<div id="about" class="section">
 <h2>Giới thiệu</h2>
-<p>Bảo tàng lưu giữ tinh hoa gốm Satsuma Nhật Bản, kết nối lịch sử và nghệ thuật.</p>
+
+<p class="lang vi" style="max-width:800px; margin:auto; line-height:1.8;">
+Satsumayaki Heritage Museum là không gian trưng bày chuyên sâu về gốm Satsuma – 
+một dòng gốm truyền thống nổi tiếng của Nhật Bản, được biết đến với kỹ thuật tinh xảo 
+và giá trị nghệ thuật cao.
+
+Bảo tàng hướng đến việc lưu giữ, giới thiệu và lan tỏa tinh hoa văn hóa Nhật Bản, 
+đồng thời kết nối lịch sử, nghệ thuật và trải nghiệm dành cho du khách trong và ngoài nước.
+
+Tại đây, mỗi hiện vật không chỉ là một tác phẩm nghệ thuật, mà còn là câu chuyện về 
+thời đại, con người và di sản được gìn giữ qua nhiều thế hệ.
+</p>
+
+<p class="lang en" style="display:none; max-width:800px; margin:auto; line-height:1.8;">
+Satsumayaki Heritage Museum is dedicated to preserving and showcasing Satsuma pottery, 
+a renowned traditional ceramic art of Japan known for its intricate craftsmanship and elegance.
+
+The museum connects history, culture, and artistic expression, offering visitors 
+a unique journey into Japanese ceramic heritage.
+
+Each piece represents not only art, but also a story of time, craftsmanship, 
+and cultural legacy passed through generations.
+</p>
+
+<p class="lang jp" style="display:none; max-width:800px; margin:auto; line-height:1.8;">
+薩摩焼ヘリテージミュージアムは、日本の伝統工芸である薩摩焼の保存と紹介を目的とした展示空間です。
+
+精緻な技法と高い芸術性で知られる薩摩焼を通じて、歴史・文化・芸術の魅力を来館者に伝えます。
+
+展示作品は単なる美術品ではなく、時代や職人の想い、そして受け継がれてきた文化の物語です。
+</p>
+
 </div>
 
 <div class="section">
@@ -122,6 +157,15 @@ KHÔNG GIAN GỐM SATSUMA
 <div class="footer">
 © 2026 Satsumayaki Heritage Museum
 </div>
-
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelectorAll('.' + lang).forEach(el => {
+    el.style.display = 'block';
+  });
+}
+</script>
 </body>
 </html>
