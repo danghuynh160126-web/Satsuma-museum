@@ -107,6 +107,15 @@ document.querySelectorAll('.vi,.en,.jp').forEach(el=>el.style.display='none');
 document.querySelectorAll('.'+lang).forEach(el=>el.style.display='inline, block');
 }
 </script>
-
+<script>
+function setLang(lang){
+  document.querySelectorAll('.vi,.en,.jp').forEach(el=>{
+    el.style.display='none';
+  });
+  document.querySelectorAll('.'+lang).forEach(el=>{
+    el.style.display='block';
+  });
+}
+</script>
 </body>
 </html>
