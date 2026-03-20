@@ -6,28 +6,97 @@
 <title>Satsuma Heritage Museum</title>
 
 <style>
-body {margin:0;font-family:Segoe UI;background:#f5f5f5;}
-header {background:#0f2f2a;color:white;text-align:center;padding:60px 20px;}
-header img {height:140px;}
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#f8f5f0;
+}
 
-nav {background:#0f2f2a;padding:10px;text-align:center;}
-nav a {color:white;margin:10px;text-decoration:none;font-weight:bold;}
+/* HEADER */
+header {
+  position: relative;
+  height: 90vh;
+  background: url('banner.jpg') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+}
 
-.section {padding:50px 20px;text-align:center;}
-h2 {color:#0f2f2a;}
+header::after {
+  content:"";
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.5);
+}
+
+header * {position:relative; z-index:1;}
+
+header img {height:120px; margin-bottom:10px;}
+
+header h1 {
+  font-size:42px;
+  letter-spacing:2px;
+}
+
+.lang {
+  margin-top:20px;
+}
 
 button {
   padding:8px 12px;
   margin:5px;
   border:none;
-  background:#0f2f2a;
+  background:#c9a646;
   color:white;
   cursor:pointer;
   border-radius:5px;
 }
-button:hover {background:#c9a646;}
 
-footer {background:#0f2f2a;color:white;text-align:center;padding:20px;}
+/* NAV */
+nav {
+  background:#0f2f2a;
+  padding:12px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SECTION */
+.section {
+  padding:60px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+h2 {
+  color:#0f2f2a;
+  margin-bottom:20px;
+}
+
+/* CARD */
+.card {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background:#0f2f2a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 </style>
 </head>
 
@@ -37,18 +106,14 @@ footer {background:#0f2f2a;color:white;text-align:center;padding:20px;}
 <img src="logo.png">
 <h1>SATSUMA HERITAGE MUSEUM</h1>
 
-<div>
-<button onclick="setLang('vi')">🇻🇳 VI</button>
-<button onclick="setLang('en')">🇬🇧 EN</button>
-<button onclick="setLang('jp')">🇯🇵 JP</button>
+<div class="lang">
+<button onclick="setLang('vi')">VI</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('jp')">JP</button>
 </div>
 </header>
 
 <nav>
-<a href="#home" class="vi">Trang chủ</a>
-<a href="#home" class="en" style="display:none">Home</a>
-<a href="#home" class="jp" style="display:none">ホーム</a>
-
 <a href="#about" class="vi">Giới thiệu</a>
 <a href="#about" class="en" style="display:none">About</a>
 <a href="#about" class="jp" style="display:none">紹介</a>
@@ -62,35 +127,25 @@ footer {background:#0f2f2a;color:white;text-align:center;padding:20px;}
 <a href="#contact" class="jp" style="display:none">連絡先</a>
 </nav>
 
-<div id="home" class="section">
-<h2 class="vi">Không gian gốm Satsuma</h2>
-<h2 class="en" style="display:none">Satsuma Ceramic Space</h2>
-<h2 class="jp" style="display:none">薩摩焼の空間</h2>
-</div>
-
-<div id="about" class="section">
+<div id="about" class="section card">
 <h2 class="vi">Giới thiệu</h2>
 <h2 class="en" style="display:none">About</h2>
 <h2 class="jp" style="display:none">紹介</h2>
 
-<p class="vi">Bảo tàng Satsumayaki Heritage là không gian trưng bày và tôn vinh dòng gốm Satsuma – một trong những tinh hoa nghệ thuật thủ công truyền thống của Nhật Bản.
+<p class="vi">
+Bảo tàng Satsumayaki Heritage là không gian tôn vinh tinh hoa gốm Satsuma Nhật Bản – nơi giao thoa giữa nghệ thuật, lịch sử và văn hóa.
+</p>
 
-Tại đây, du khách được chiêm ngưỡng những hiện vật gốm quý giá với họa tiết tinh xảo, kỹ thuật chế tác độc đáo và giá trị lịch sử lâu đời. Không chỉ là nơi lưu giữ di sản, bảo tàng còn mang đến trải nghiệm văn hóa sâu sắc, kết nối quá khứ với hiện tại thông qua nghệ thuật gốm sứ.
+<p class="en" style="display:none">
+A refined space preserving the elegance of Satsuma ceramics, where history and artistry converge.
+</p>
 
-Chúng tôi mong muốn trở thành cầu nối văn hóa giữa Việt Nam và Nhật Bản, lan tỏa vẻ đẹp của nghệ thuật Satsuma đến cộng đồng và du khách trong nước cũng như quốc tế.</p>
-<p class="en" style="display:none">Satsumayaki Heritage Museum is a dedicated space for preserving and showcasing Satsuma pottery, one of Japan’s most refined traditional ceramic arts.
-
-Visitors can explore a collection of exquisite artifacts, featuring intricate designs, unique craftsmanship, and rich historical value. Beyond preservation, the museum offers a cultural experience that bridges the past and present through the beauty of ceramic art.
-
-Our mission is to serve as a cultural bridge between Vietnam and Japan, sharing the elegance and legacy of Satsuma art with both local and international visitors.</p>
-<p class="jp" style="display:none">薩摩焼ヘリテージミュージアムは、日本の伝統工芸である薩摩焼の保存と展示を目的とした文化施設です。
-
-館内では、繊細な装飾や卓越した技術、そして歴史的価値を持つ陶芸作品をご覧いただけます。本ミュージアムは単なる展示空間にとどまらず、陶芸芸術を通して過去と現在をつなぐ文化体験を提供します。
-
-私たちは、ベトナムと日本を結ぶ文化の架け橋として、薩摩焼の美しさと価値を国内外の来館者に広く発信してまいります。</p>
+<p class="jp" style="display:none">
+薩摩焼の美と歴史が融合する文化空間です。
+</p>
 </div>
 
-<div id="ticket" class="section">
+<div id="ticket" class="section card">
 <h2 class="vi">Vé tham quan</h2>
 <h2 class="en" style="display:none">Tickets</h2>
 <h2 class="jp" style="display:none">チケット</h2>
@@ -100,26 +155,19 @@ Our mission is to serve as a cultural bridge between Vietnam and Japan, sharing 
 <p class="jp" style="display:none">大人：50,000ドン</p>
 </div>
 
-<div id="contact" class="section">
+<div id="contact" class="section card">
 <h2 class="vi">Liên hệ</h2>
 <h2 class="en" style="display:none">Contact</h2>
 <h2 class="jp" style="display:none">連絡先</h2>
 
-<p>17 Hùng Vương,Phường Hội An, Thành Phố Đà Nẵng
-</p>
-<p>0935978887- 0931060581 </p>
+<p>17 Hùng Vương, Hội An</p>
+<p>0935978887</p>
 </div>
 
 <footer>
 © 2026 Satsuma Heritage Museum
 </footer>
 
-<script>
-function setLang(lang){
-document.querySelectorAll('.vi,.en,.jp').forEach(el=>el.style.display='none');
-document.querySelectorAll('.'+lang).forEach(el=>el.style.display='inline, block');
-}
-</script>
 <script>
 function setLang(lang){
   document.querySelectorAll('.vi,.en,.jp').forEach(el=>{
@@ -130,5 +178,6 @@ function setLang(lang){
   });
 }
 </script>
+
 </body>
 </html>
