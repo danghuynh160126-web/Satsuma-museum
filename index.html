@@ -103,15 +103,43 @@ footer {
 <body>
 
 <header>
-<img src="logo.png">
-<h1>SATSUMA HERITAGE MUSEUM</h1>
+  <div class="overlay">
+    <img src="logo.png" class="logo">
+    <h1>SATSUMA HERITAGE MUSEUM</h1>
+    <p class="tagline">Where Japanese ceramic legacy lives</p>
 
-<div class="lang">
-<button onclick="setLang('vi')">VI</button>
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('jp')">JP</button>
-</div>
-</header>
+    <div class="lang">
+      <button onclick="setLang('vi')">VI</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('jp')">JP</button>
+    </div>
+  </div>
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('banner.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.logo {
+  width: 280px;
+  margin-bottom:20px;
+}
+
+h1 {
+  font-size:42px;
+  letter-spacing:3px;
+}
+
+.tagline {
+  font-size:16px;
+  color:#c9a646;
+  margin-top:10px;
+}
 
 <nav>
 <a href="#about" class="vi">Giới thiệu</a>
