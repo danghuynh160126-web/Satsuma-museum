@@ -15,7 +15,7 @@ body {
 /* HEADER */
 header {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
               url('banner.png') center/cover no-repeat;
   display:flex;
   justify-content:center;
@@ -24,39 +24,49 @@ header {
   color:white;
 }
 
-.logo {
-  width: 280px;
-  margin-bottom:20px;
+.hero-content {
+  max-width: 900px;
+  padding: 20px;
   animation: fadeUp 1.5s ease;
 }
 
+/* TITLE */
 h1 {
-  font-size:42px;
-  letter-spacing:3px;
+  font-size: 52px;
+  letter-spacing: 6px;
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 0 6px 30px rgba(0,0,0,0.9);
 }
 
+/* TAGLINE */
 .tagline {
-  font-size:16px;
-  color:#c9a646;
-  margin-top:10px;
+  font-size: 18px;
+  color: #d4af37;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.8);
 }
 
+/* LANG */
 .lang {
-  margin-top:20px;
+  margin-top: 35px;
 }
 
-button {
-  padding:8px 12px;
-  margin:5px;
-  border:none;
-  background:#c9a646;
+.lang button {
+  padding: 6px 14px;
+  margin: 4px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #c9a646;
   color:white;
   cursor:pointer;
-  border-radius:5px;
 }
 
-button:hover {
-  background:#a88b3a;
+.lang button:hover {
+  background: #c9a646;
 }
 
 /* NAV */
@@ -110,8 +120,14 @@ footer {
 }
 
 @keyframes fadeUp {
-  from {opacity:0; transform:translateY(30px);}
-  to {opacity:1; transform:translateY(0);}
+  from {
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 </style>
 </head>
@@ -119,8 +135,7 @@ footer {
 <body>
 
 <header>
-  <div>
-   
+  <div class="hero-content">
     <h1>SATSUMA HERITAGE MUSEUM</h1>
     <p class="tagline">Where Japanese ceramic legacy lives</p>
 
