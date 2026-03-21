@@ -108,6 +108,32 @@ nav a {
   transform: scale(1.05);
 }
 
+/* LIGHTBOX */
+#lightbox {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:10px;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
 /* FOOTER */
 footer {
   background:#0f2f2a;
@@ -175,12 +201,12 @@ A refined space preserving the elegance of Satsuma ceramics.
 <h2 class="jp" style="display:none">コレクション</h2>
 
 <div class="gallery">
-<img src="img1.jpg">
-<img src="img2.jpg">
-<img src="img3.jpg">
-<img src="img4.jpg">
-<img src="img5.jpg">
-<img src="img6.jpg">
+<img src="img1.jpg" onclick="openLightbox(this)">
+<img src="img2.jpg" onclick="openLightbox(this)">
+<img src="img3.jpg" onclick="openLightbox(this)">
+<img src="img4.jpg" onclick="openLightbox(this)">
+<img src="img5.jpg" onclick="openLightbox(this)">
+<img src="img6.jpg" onclick="openLightbox(this)">
 </div>
 </div>
 
@@ -207,6 +233,11 @@ A refined space preserving the elegance of Satsuma ceramics.
 © 2026 Satsuma Heritage Museum
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
 <script>
 function setLang(lang){
   document.querySelectorAll('.vi,.en,.jp').forEach(el=>{
@@ -215,6 +246,15 @@ function setLang(lang){
   document.querySelectorAll('.'+lang).forEach(el=>{
     el.style.display='block';
   });
+}
+
+function openLightbox(img){
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display = "none";
 }
 </script>
 
