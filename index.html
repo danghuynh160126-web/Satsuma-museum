@@ -31,20 +31,14 @@ header {
   transform: translateX(-50%);
 }
 
-/* TAGLINE */
 .tagline {
   font-size: 20px;
   color: #d4af37;
   letter-spacing: 2px;
   font-style: italic;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.9);
 }
 
 /* LANG */
-.lang {
-  margin-top: 20px;
-}
-
 .lang button {
   padding: 5px 10px;
   font-size: 11px;
@@ -96,16 +90,46 @@ nav a {
   margin-top: 30px;
 }
 
-.gallery img {
-  width: 100%;
+.item {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
-  transition: 0.3s;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  cursor:pointer;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.item img {
+  width: 100%;
+  transition: 0.4s;
+}
+
+/* INFO */
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: white;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.info p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.item:hover .info {
+  opacity: 1;
 }
 
 /* LIGHTBOX */
@@ -126,12 +150,6 @@ nav a {
   max-width:90%;
   max-height:90%;
   border-radius:10px;
-  animation: zoomIn 0.3s ease;
-}
-
-@keyframes zoomIn {
-  from {transform: scale(0.8);}
-  to {transform: scale(1);}
 }
 
 /* FOOTER */
@@ -140,7 +158,6 @@ footer {
   color:white;
   text-align:center;
   padding:20px;
-  margin-top:40px;
 }
 </style>
 </head>
@@ -182,17 +199,9 @@ footer {
 <h2 class="en" style="display:none">About</h2>
 <h2 class="jp" style="display:none">紹介</h2>
 
-<p class="vi">
-Không gian trưng bày và tôn vinh tinh hoa gốm Satsuma Nhật Bản – nơi giao thoa giữa nghệ thuật và lịch sử.
-</p>
-
-<p class="en" style="display:none">
-A refined space preserving the elegance of Satsuma ceramics.
-</p>
-
-<p class="jp" style="display:none">
-薩摩焼の美と歴史が融合する文化空間です。
-</p>
+<p class="vi">Không gian trưng bày gốm Satsuma Nhật Bản.</p>
+<p class="en" style="display:none">A refined space preserving Satsuma ceramics.</p>
+<p class="jp" style="display:none">薩摩焼の展示空間です。</p>
 </div>
 
 <div id="gallery" class="section">
@@ -201,12 +210,55 @@ A refined space preserving the elegance of Satsuma ceramics.
 <h2 class="jp" style="display:none">コレクション</h2>
 
 <div class="gallery">
-<img src="img1.jpg" onclick="openLightbox(this)">
-<img src="img2.jpg" onclick="openLightbox(this)">
-<img src="img3.jpg" onclick="openLightbox(this)">
-<img src="img4.jpg" onclick="openLightbox(this)">
-<img src="img5.jpg" onclick="openLightbox(this)">
-<img src="img6.jpg" onclick="openLightbox(this)">
+
+<div class="item" onclick="openLightbox(this)">
+<img src="img1.jpg">
+<div class="info">
+<h3>Gốm Satsuma cổ</h3>
+<p>Thế kỷ 19</p>
+</div>
+</div>
+
+<div class="item" onclick="openLightbox(this)">
+<img src="img2.jpg">
+<div class="info">
+<h3>Bình gốm hoa văn</h3>
+<p>Men vàng</p>
+</div>
+</div>
+
+<div class="item" onclick="openLightbox(this)">
+<img src="img3.jpg">
+<div class="info">
+<h3>Bộ trà Satsuma</h3>
+<p>Phong cách quý tộc</p>
+</div>
+</div>
+
+<div class="item" onclick="openLightbox(this)">
+<img src="img4.jpg">
+<div class="info">
+<h3>Tượng gốm</h3>
+<p>Chạm khắc tinh xảo</p>
+</div>
+</div>
+
+<div class="item" onclick="openLightbox(this)">
+<img src="img5.jpg">
+<div class="info">
+<h3>Bình cổ</h3>
+<p>Hiếm</p>
+</div>
+</div>
+
+<div class="item" onclick="openLightbox(this)">
+<img src="img6.jpg">
+<div class="info">
+<h3>Gốm trưng bày</h3>
+<p>Truyền thống</p>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -215,16 +267,11 @@ A refined space preserving the elegance of Satsuma ceramics.
 <h2 class="en" style="display:none">Tickets</h2>
 <h2 class="jp" style="display:none">チケット</h2>
 
-<p class="vi">Người lớn: 50.000đ</p>
-<p class="en" style="display:none">Adults: 50,000 VND</p>
-<p class="jp" style="display:none">大人：50,000ドン</p>
+<p>50.000đ</p>
 </div>
 
 <div id="contact" class="section card">
-<h2 class="vi">Liên hệ</h2>
-<h2 class="en" style="display:none">Contact</h2>
-<h2 class="jp" style="display:none">連絡先</h2>
-
+<h2>Liên hệ</h2>
 <p>17 Hùng Vương, Hội An</p>
 <p>0935978887</p>
 </div>
@@ -233,24 +280,19 @@ A refined space preserving the elegance of Satsuma ceramics.
 © 2026 Satsuma Heritage Museum
 </footer>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
 </div>
 
 <script>
 function setLang(lang){
-  document.querySelectorAll('.vi,.en,.jp').forEach(el=>{
-    el.style.display='none';
-  });
-  document.querySelectorAll('.'+lang).forEach(el=>{
-    el.style.display='block';
-  });
+  document.querySelectorAll('.vi,.en,.jp').forEach(el=>el.style.display='none');
+  document.querySelectorAll('.'+lang).forEach(el=>el.style.display='block');
 }
 
-function openLightbox(img){
+function openLightbox(el){
   document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox-img").src = el.querySelector("img").src;
 }
 
 function closeLightbox(){
